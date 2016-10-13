@@ -1,0 +1,168 @@
+/* base */
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	cursor: default;
+}
+
+
+
+
+
+
+/* header */
+header {
+	padding: 5px 0px 5px 50px;
+}
+
+.title_banner {
+	padding: 5px 50px 5px 70px;
+	font-style: normal;					/* normal/italic/oblique */
+	font-variant:normal;				/* normal/small-caps */
+	font-weight: bold;					/* normal/bold/lighter/bolder */
+	font-size: xx-large;				/* xx-small/x-small/small/medium/large/x-large/xx-large */
+	line-height: 45px;
+	font-family: sans-serif;			/* sans-serif(ゴシック)/serif(明朝)/cursive(筆記)/fantasy(装飾)/monospace(等幅) */
+	color: #000000;						/* black */
+	letter-spacing: 20px;
+	background-color: #f5f5f5;			/* whitesmoke */
+	border-bottom: thick solid #c0c0c0;	/* silver */
+										/* thin(細)/medium(中)/thick(太) */
+										/* none(無)/solid(実)/double(二重)/groove(谷)/ridge(山)/inset(凹)/outset(凸)/dotted(点)/dashed(破) */
+}
+
+#current_date {
+	padding: 10px 10px 10px 50px;
+	font-style: normal;					/* normal/italic/oblique */
+	font-variant:normal;				/* normal/small-caps */
+	font-weight: bold;					/* normal/bold/lighter/bolder */
+	font-size: xx-large;				/* xx-small/x-small/small/medium/large/x-large/xx-large */
+	line-height: normal;
+	font-family: sans-serif;			/* sans-serif(ゴシック)/serif(明朝)/cursive(筆記)/fantasy(装飾)/monospace(等幅) */
+	color: #0000FF;						/* blue */
+	letter-spacing: normal;
+	background-color: transparent;
+	border-bottom: none;
+}
+
+
+
+
+
+
+/* table */
+.destination_board {
+	width: 50%;
+	height: 100%;
+	table-layout: fixed;				/* auto(自動)/fixed(固定) */
+	border-collapse: separate;			/* collapse(重)/separate(隙間) */
+	border-spacing: 0px;				/* border-collapse=separate の時のみ有効 */
+	empty-cells: show;					/* show(境界表示)/hide(境界非表示) */
+	border: thick ridge #cccccc;
+										/* thin(細)/medium(中)/thick(太) */
+										/* none(無)/solid(実)/double(二重)/groove(谷)/ridge(山)/inset(凹)/outset(凸)/dotted(点)/dashed(破) */
+	float: left;						/* node/left/right */
+}
+.clearfloat {
+	clear: both;						/* none/left/right/both */
+}
+.destination_board > thead > tr > th {
+	padding: 5px 0px 5px 10px;
+	font-style: normal;					/* normal/italic/oblique */
+	font-variant:normal;				/* normal/small-caps */
+	font-weight: bold;					/* normal/bold/lighter/bolder */
+	font-size: x-large;					/* xx-small/x-small/small/medium/large/x-large/xx-large */
+	line-height: normal;
+	font-family: sans-serif;			/* sans-serif(ゴシック)/serif(明朝)/cursive(筆記)/fantasy(装飾)/monospace(等幅) */
+	color: #ffffff;						/* white */
+	letter-spacing: 20px;
+	background-color: #330099;			/* near darkblue */
+	border-top: thin solid #ffffff;
+	border-left: thin solid #ffffff;
+	border-right: thin solid #cccccc;
+	border-bottom: thick double #cccccc;
+										/* thin(細)/medium(中)/thick(太) */
+										/* none(無)/solid(実)/double(二重)/groove(谷)/ridge(山)/inset(凹)/outset(凸)/dotted(点)/dashed(破) */
+}
+.destination_board > thead > tr > th.th_display_name {
+	width: 30%;
+}
+.destination_board > thead > tr > th.th_destination {
+	width: 40%;
+}
+.destination_board > thead > tr > th.th_returnplan {
+	width: 30%;
+}
+
+
+
+.destination_board > tbody > tr:active {
+	cursor: move;
+}
+
+
+
+.destination_board > tbody > tr > td {
+	padding: 4px 4px 4px 4px;
+	font-style: normal;					/* normal/italic/oblique */
+	font-variant:normal;				/* normal/small-caps */
+	font-weight: bold;					/* normal/bold/lighter/bolder */
+	font-size: x-large;					/* xx-small/x-small/small/medium/large/x-large/xx-large */
+	line-height: normal;
+	font-family: sans-serif;			/* sans-serif(ゴシック)/serif(明朝)/cursive(筆記)/fantasy(装飾)/monospace(等幅) */
+	color: #000000;						/* black */
+	letter-spacing: normal;
+	border-right: thin solid #cccccc;
+	border-bottom: thin solid #cccccc;
+										/* thin(細)/medium(中)/thick(太) */
+										/* none(無)/solid(実)/double(二重)/groove(谷)/ridge(山)/inset(凹)/outset(凸)/dotted(点)/dashed(破) */
+	white-space: nowrap;				/* normal(自動折り返し許可)/nowrap(自動折り返し禁止) */
+	overflow: hidden;					/* visible/scroll/hidden/auto */
+	text-overflow: ellipsis;			/* clip(切取)/ellipsis(省略記号)/string(省略文字指定) */)
+}
+.destination_board > tbody > tr > td:hover {
+	background-color: #e6e6fa;			/* lavendar */
+}
+.destination_board > tbody > tr > td:active {
+	background-color: transparent;
+}
+.destination_board > tbody > tr > td > input {
+	width: 100%;
+	height: 120%;
+	font-size: x-large;					/* xx-small/x-small/small/medium/large/x-large/xx-large */
+	box-sizing: border-box;
+}
+.destination_board > tbody > tr > td.td_display_name {
+	padding: 2px 2px 4px 2px;
+	letter-spacing: 10px;
+	border: thick double #cccccc;
+										/* thin(細)/medium(中)/thick(太) */
+										/* none(無)/solid(実)/double(二重)/groove(谷)/ridge(山)/inset(凹)/outset(凸)/dotted(点)/dashed(破) */
+	text-align: center;
+}
+.destination_board > tbody > tr > td.td_display_name_false {
+	background-color: #ff0000;			/* red */
+}
+.destination_board > tbody > tr > td.td_display_name_true {
+	background-color: #f6f6f6;			/* near whitesmoke */
+}
+.destination_board > tbody > tr > td.td_destination {
+	text-align: center;
+}
+.destination_board > tbody > tr > td.td_returnplan {
+	text-align: center;
+}
+
+
+
+//.destination_board td:hober {
+//	background-color: "blue";
+//	cursor: text;
+//	cursor: move;
+//}
+//table.destination_board td:hover {
+//  background-color: #CCFFFF;    /* マウスオーバー時のセルの背景色 */
+//}
+

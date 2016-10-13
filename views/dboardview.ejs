@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="content-language" content="ja">
+	<meta http-equiv="content-type" content="text/html" charset="utf-8">
+	<meta name="application-name" content="d-Board">
+	<meta name="keywords" content="destination,board,行先,掲示板">
+	<meta name="description" content="電子行先掲示板">
+	<meta name="robots" content="noindex,nofollow">
+	<title>行先掲示板</title>
+	<link rel="stylesheet" href="./stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="./stylesheets/dboard.css">
+	<script src="./javascripts/jquery-3.1.0.min.js"></script>
+	<script src="./javascripts/jquery-ui.min.js"></script>
+	<script src="./javascripts/socket.io.js"></script>
+	<script src="./javascripts/dboard.js"></script>
+</head>
+<body>
+	<header>
+		<span class="title_banner">行先掲示板</span>
+		<span id="current_date"></span><br>
+	</header>
+	<% for(var t = 0; t < table_number; t++) { %>
+		<table class="destination_board">
+			<thead>
+				<tr>
+					<th class="th_display_name">氏名</th>
+					<th class="th_destination">行先</th>
+					<th class="th_returnplan">帰社</th>
+				</tr>
+			</thead>
+			<tbody class="sortable-table" id="dboard-tables<%= t %>">
+			<% for(var i = t * max_row; i < boards[0].list_pattern.length && i < (t + 1) * max_row; i++) { %>
+				<tr>
+					<td class="td_display_name td_display_name_<%= boards[0].list_pattern[i]._id.enrolled %>" value="<%= boards[0].list_pattern[i]._id._id %>">
+						<%= boards[0].list_pattern[i]._id.display_name %>
+					</td>
+					<td class="td_destination"><%= boards[0].list_pattern[i]._id.destination %></td>
+					<td class="td_returnplan"><%= boards[0].list_pattern[i]._id.returnplan %></td>
+				</tr>
+			<% } %>
+			</tbody>
+		</table>
+	<% } %>
+	<div class="clearfloat">
+</body>
+</html>
